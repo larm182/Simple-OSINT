@@ -1,3 +1,7 @@
+#!/usr/bin/python
+#-*- coding: utf-8 -*-
+#Autor: Luis Angel Ramirez Mendoza
+
 from flask import Flask, render_template, request, Response, redirect, send_file, jsonify
 import folium
 from geopy.geocoders import Nominatim
