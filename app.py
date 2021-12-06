@@ -47,7 +47,7 @@ def geo_html():
 		with open( path + 'location.html', "r") as f:
 			content = f.read()
 		return Response(content, mimetype='text/html')
-		#return render_template('ubicacion.html')
+
 
 @app.route('/envia2', methods=['GET', 'POST'])
 def ip_html():
@@ -60,8 +60,6 @@ def ip_html():
 		parsed = json.loads(data)
 		print(json.dumps(parsed, indent=4, sort_keys=True))
 		parsed_2 = json.dumps(parsed, indent=4, sort_keys=True) 
-		#return jsonify(parsed)
-		#return render_template('out.html', temp={'ip_html':parsed})
 		return render_template('out.html', temp=parsed_2)
 
 @app.route('/envia3', methods=['GET', 'POST'])
@@ -84,8 +82,6 @@ def id_html():
 		print("Checking possibity of Number: ", e )
 		print(results)
 		results_1 = "Town: " + f"{a}" + ", " + "Operator: " f"{b}" + ", " + "Contry: "+ f"{c}" + ", " + "Geolocation: " f"{results}" + ", " + "Valid mobile number: " + f"{d}" + ", " + "Checking possibity of Number: " + f"{d}"
-		#return results_1
-
 		return render_template('out_2.html', temp=results_1)
 
 
