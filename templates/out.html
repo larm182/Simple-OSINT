@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{{ url_for("static", filename="style_out.css") }}" rel="stylesheet">	
+	<link rel="stylesheet" type="text/css" href="style_out.css">
+	<title>Out</title>	
+</head>
+<body>
+	<h1>Information Geolocation</h1>
+	<div class="container">
+		<div class="box">
+			<span></span>
+			<div class="content">
+			
+			<h3>
+				{%autoescape false%}
+
+				{{temp | replace("," ,"<br>")}}
+				
+				{% endautoescape %}
+
+
+			</h3>
+
+	    </div>
+	</div>
+</body>
+</html>

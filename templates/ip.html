@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style_ip.css">
+	<link href="{{ url_for("static", filename="style_ip.css") }}" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<title> IP Location</title>
+</head>
+<body>
+	<div class=banner>
+		<h1 class="title" data-text="Geolocalizacion"></i> IP Location</h1>
+		<div class="search-box">
+			<form method="POST">
+				<input class="search-txt" type="text" name="url" placeholder="Make your search">
+				
+				<button class="search-btn" type="submit" formaction="/envia2">
+					<i class="fas fa-search"></i>
+				</button>
+				</a>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
